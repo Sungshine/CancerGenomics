@@ -16,7 +16,7 @@ while (my $line = <INPUT>) {
     my $key = $1;
     my $value = $2;
     $key =~ s/\s//g;
-    print "$key\t$value\n";
+    # print "$key\t$value\n";
     $hash{$key} = $value;
   }
 }
