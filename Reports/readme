@@ -1,0 +1,14 @@
+Hello. -Adele
+
+// To run in command line
+// Compile the knitr figures, replace "reportv1.Rnw" with your Rnw file
+
+$ R -e 'library(knitr);knit("reportv1.Rnw")'    // will output a .tex file to be used as input in next step
+
+// Compile LaTeX pdf document and knit together with R figures/images
+// \myvar is declared to be used as the report header under "patient name"
+
+$ pdflatex "\def\myvar{688.tsv} \input{reportv1.tex}"
+
+Do not forget to change the absolute paths to the banner images contained within the repo.
+There is a result file named 688.tsv to be used to make sure the tables are generating correctly in the LaTeX pdf.
