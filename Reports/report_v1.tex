@@ -60,8 +60,8 @@
 \begin{document}
 
 % the header image
-\ULCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/AHCG-CancerGenomics-2015/reports/screen_top.png} % ICRC banner image
-\LLCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/AHCG-CancerGenomics-2015/reports/screen_bottom.png} % ICRC footer image
+\ULCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/CancerGenomics/Reports/screentop.png} % ICRC banner image
+\LLCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/CancerGenomics/Reports/screenbottom.png} % ICRC footer image
 
 % the hospital, patient and sample information
 \begin{tabbing}
@@ -73,22 +73,10 @@
 
 % the resulting risk assessment
 \noindent
-\framebox[\linewidth]{HIGH RISK}
+\framebox[\linewidth]{HIGH RISK} 
+\newline
 
-% the gene mutation results table 
-\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
-\begin{center}
-\begin{tabular}{|c|c|c|}
-  \hline
-  \head{Gene} & \head{Mutation} & \head{Known Associations} \\
-  \hline
-   \verb| MSH2   | & \verb| c.8C>G   | & \verb Lynch-syndrome \\
-   \verb| BRCA1  | & \verb| c.9A>T   | & \verb Breast-cancer \\
-   \verb| BRCA2  | & \verb| c.10G>C  | & \verb Ovarian-cancer \\
-  \hline
-\end{tabular}
-\end{center}
-
+% use kable package to display the gene mutation results table 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \begin{tabular}{c|c|c|c|c}
@@ -119,7 +107,6 @@ ADAM19 & 157491660 & Missense & p.P684S & 0.11456\\
 
 
 \end{knitrout}
-
 
 % the gene details box
 \noindent

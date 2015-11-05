@@ -10,8 +10,8 @@
 \begin{document}
 
 % the header image
-\ULCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/AHCG-CancerGenomics-2015/reports/screen_top.png} % ICRC banner image
-\LLCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/AHCG-CancerGenomics-2015/reports/screen_bottom.png} % ICRC footer image
+\ULCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/CancerGenomics/Reports/screentop.png} % ICRC banner image
+\LLCornerWallPaper{1}{/Users/sungshine/GeorgiaTech/VannbergBIOL8803F/CancerGenomics/Reports/screenbottom.png} % ICRC footer image
 
 % the hospital, patient and sample information
 \begin{tabbing}
@@ -23,11 +23,12 @@
 
 % the resulting risk assessment
 \noindent
-\framebox[\linewidth]{HIGH RISK}
+\framebox[\linewidth]{HIGH RISK} 
+\newline
 
 % use kable package to display the gene mutation results table 
-<<kable, echo=FALSE, >>=
-data <- read.table("/Users/sungshine/Desktop/part.tsv", header=FALSE)
+<<kable, echo=FALSE, tidy=FALSE>>=
+data <- read.table("688.tsv", header=FALSE)
 names(data) <- c("Gene", "Start", "Class", "Mutation", "Valid", "CADD", "Database")
 trimmed <- data[, c("Gene", "Start", "Class", "Mutation", "CADD")]
 library(knitr)
