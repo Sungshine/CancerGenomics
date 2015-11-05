@@ -3,7 +3,7 @@ Hello. -Adele
 // To run in command line
 // Compile the knitr figures, replace "reportv1.Rnw" with your Rnw file
 
-$ R -e 'library(knitr);knit("reportv1.Rnw")'    // will output a .tex file to be used as input in next step
+$ R -e 'library(knitr);knit("reportv1.Rnw")'  // will output a .tex file to be used as input in next step
 
 // Compile LaTeX pdf document and knit together with R figures/images
 // \myvar is declared to be used as the report header under "patient name"
